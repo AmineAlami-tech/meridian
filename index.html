@@ -39,19 +39,16 @@ body{
   cursor:none;
 }
 
-/* GRAIN */
 body::after{
   content:'';position:fixed;inset:0;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");
   pointer-events:none;z-index:900;opacity:.5;
 }
 
-/* CURSOR */
 .cur{position:fixed;width:5px;height:5px;background:var(--red2);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
 .cur-ring{position:fixed;width:26px;height:26px;border:1px solid rgba(139,38,53,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .18s,height .18s,border-color .18s;}
 body:has(a:hover) .cur-ring,body:has(button:hover) .cur-ring{width:40px;height:40px;border-color:var(--red2);}
 
-/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:500;
   display:flex;align-items:center;justify-content:space-between;
@@ -88,14 +85,12 @@ nav{
 }
 .nav-cta:hover{background:var(--red) !important;color:var(--ink) !important;}
 
-/* HERO */
 .hero{
   min-height:100vh;padding-top:64px;
   display:grid;grid-template-columns:1fr 1fr;
   position:relative;overflow:hidden;
 }
 
-/* grid lines bg */
 .hero::before{
   content:'';position:absolute;inset:0;
   background-image:
@@ -106,7 +101,6 @@ nav{
   pointer-events:none;
 }
 
-/* bordeaux glow */
 .hero-glow{
   position:absolute;width:500px;height:500px;
   background:radial-gradient(circle,rgba(139,38,53,.12) 0%,transparent 70%);
@@ -190,7 +184,6 @@ nav{
   justify-content:center;
 }
 
-/* Animated circle diagram */
 .diagram{position:relative;width:260px;height:260px;}
 .diagram svg{width:100%;height:100%;}
 
@@ -211,7 +204,6 @@ nav{
 .hs-val span{color:var(--red2);font-size:1.2rem;}
 .hs-label{font-size:.7rem;color:var(--muted);letter-spacing:.04em;line-height:1.4;}
 
-/* TICKER */
 .ticker-wrap{
   overflow:hidden;
   border-top:1px solid var(--line);
@@ -232,7 +224,6 @@ nav{
 
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* SECTIONS */
 .sec{padding:112px 80px;position:relative;}
 
 .sec-head{
@@ -243,7 +234,6 @@ nav{
 .sh-line{flex:1;height:1px;background:var(--line);}
 .sh-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
 
-/* PROBLEM */
 .problem{background:var(--bg);border-bottom:1px solid var(--line);}
 
 .prob-wrap{display:grid;grid-template-columns:5fr 7fr;gap:96px;align-items:start;}
@@ -271,7 +261,6 @@ nav{
 .pain h4{font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em;}
 .pain p{font-size:.82rem;color:var(--muted);line-height:1.7;}
 
-/* SERVICES */
 .services{background:var(--bg2);border-bottom:1px solid var(--line);}
 
 .svc-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:72px;}
@@ -301,7 +290,6 @@ nav{
 }
 .arr{font-size:.9rem;transition:transform .25s,color .25s;color:var(--muted);}
 
-/* PROCESS */
 .process{background:var(--bg3);border-bottom:1px solid var(--line);}
 
 .proc-grid{
@@ -325,7 +313,6 @@ nav{
   padding-top:18px;display:block;
 }
 
-/* PRICING */
 .pricing{background:var(--bg);border-bottom:1px solid var(--line);}
 .price-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:72px;}
 .price-title{font-family:var(--body);font-weight:700;font-size:clamp(2rem,3vw,3.2rem);line-height:1.05;letter-spacing:-.025em;}
@@ -360,7 +347,6 @@ nav{
   font-weight:700;letter-spacing:-.04em;
   color:var(--ink);margin-bottom:4px;line-height:1;
 }
-.card.feat .card-amt{color:var(--ink);}
 .card-cycle{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-bottom:36px;}
 
 .card-feats{list-style:none;flex:1;display:flex;flex-direction:column;gap:12px;margin-bottom:36px;}
@@ -386,7 +372,6 @@ nav{
 .card.feat .card-btn{background:var(--red);border-color:var(--red);color:var(--ink);}
 .card.feat .card-btn:hover{background:var(--red2);border-color:var(--red2);}
 
-/* TESTIMONIALS */
 .testi{background:var(--bg2);border-bottom:1px solid var(--line);}
 .t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
 .t-card{background:var(--bg2);padding:44px 36px;transition:background .25s;}
@@ -406,7 +391,6 @@ nav{
 .t-name{font-size:.82rem;font-weight:600;color:var(--ink);display:block;margin-bottom:3px;}
 .t-role{font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spacing:.04em;}
 
-/* FINAL CTA */
 .final{
   background:var(--bg3);
   padding:140px 80px;
@@ -437,7 +421,6 @@ nav{
   color:var(--muted);letter-spacing:.06em;opacity:.6;
 }
 
-/* FOOTER */
 footer{
   background:var(--bg);border-top:1px solid var(--line);
   padding:32px 80px;display:flex;
@@ -454,13 +437,11 @@ footer p{font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spac
 footer a{font-family:var(--mono);font-size:.62rem;color:var(--muted);text-decoration:none;letter-spacing:.06em;transition:color .2s;}
 footer a:hover{color:var(--red2);}
 
-/* REVEAL */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .85s ease,transform .85s ease;}
 .rv.on{opacity:1;transform:translateY(0);}
 
 @keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
-/* MOBILE */
 @media(max-width:960px){
   nav{padding:0 24px;}
   .nav-links{display:none;}
@@ -488,7 +469,6 @@ footer a:hover{color:var(--red2);}
 <div class="cur" id="cur"></div>
 <div class="cur-ring" id="curRing"></div>
 
-<!-- NAV -->
 <nav>
   <a href="#" class="logo"><span class="logo-dot"></span>Meridian</a>
   <ul class="nav-links">
@@ -499,10 +479,8 @@ footer a:hover{color:var(--red2);}
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-glow"></div>
-
   <div class="hero-left">
     <div class="h-eyebrow">
       <span class="ey-dash"></span>
@@ -518,7 +496,6 @@ footer a:hover{color:var(--red2);}
       <a href="#services" class="btn-outline">See what we automate</a>
     </div>
   </div>
-
   <div class="hero-right">
     <div class="hero-right-top">
       <div class="diagram">
@@ -530,47 +507,29 @@ footer a:hover{color:var(--red2);}
           <line x1="130" y1="20" x2="130" y2="240" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
           <line x1="52" y1="52" x2="208" y2="208" stroke="rgba(255,255,255,.03)" stroke-width="1"/>
           <line x1="208" y1="52" x2="52" y2="208" stroke="rgba(255,255,255,.03)" stroke-width="1"/>
-          <!-- center -->
           <circle cx="130" cy="130" r="5" fill="#8b2635"/>
-          <!-- orbit 1 -->
           <circle cx="130" cy="20" r="5" fill="#8b2635" opacity=".9">
             <animateTransform attributeName="transform" type="rotate" from="0 130 130" to="360 130 130" dur="10s" repeatCount="indefinite"/>
           </circle>
-          <!-- orbit 2 -->
           <circle cx="206" cy="130" r="3.5" fill="rgba(139,38,53,.6)">
             <animateTransform attributeName="transform" type="rotate" from="0 130 130" to="-360 130 130" dur="7s" repeatCount="indefinite"/>
           </circle>
-          <!-- orbit 3 -->
           <circle cx="130" cy="54" r="3" fill="rgba(139,38,53,.4)">
             <animateTransform attributeName="transform" type="rotate" from="90 130 130" to="450 130 130" dur="16s" repeatCount="indefinite"/>
           </circle>
-          <!-- labels -->
           <text x="138" y="128" fill="rgba(255,255,255,.18)" font-size="8" font-family="DM Mono,monospace" letter-spacing="1">MERIDIAN</text>
         </svg>
       </div>
     </div>
     <div class="hero-stats">
-      <div class="hs">
-        <div class="hs-val">20<span>h</span></div>
-        <div class="hs-label">Saved per week<br>per store</div>
-      </div>
-      <div class="hs">
-        <div class="hs-val">+23<span>%</span></div>
-        <div class="hs-label">Revenue from<br>recovered carts</div>
-      </div>
-      <div class="hs">
-        <div class="hs-val">14<span>d</span></div>
-        <div class="hs-label">From first call<br>to fully live</div>
-      </div>
-      <div class="hs">
-        <div class="hs-val">24<span>/7</span></div>
-        <div class="hs-label">AI active with<br>zero downtime</div>
-      </div>
+      <div class="hs"><div class="hs-val">20<span>h</span></div><div class="hs-label">Saved per week<br>per store</div></div>
+      <div class="hs"><div class="hs-val">+23<span>%</span></div><div class="hs-label">Revenue from<br>recovered carts</div></div>
+      <div class="hs"><div class="hs-val">14<span>d</span></div><div class="hs-label">From first call<br>to fully live</div></div>
+      <div class="hs"><div class="hs-val">24<span>/7</span></div><div class="hs-label">AI active with<br>zero downtime</div></div>
     </div>
   </div>
 </section>
 
-<!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker-track">
     <div class="ti"><span class="ti-sep">◆</span>Customer Support Automation</div>
@@ -588,126 +547,47 @@ footer a:hover{color:var(--red2);}
   </div>
 </div>
 
-<!-- PROBLEM -->
 <section class="sec problem rv" id="problem">
-  <div class="sec-head">
-    <span class="sh-n">01</span>
-    <span class="sh-line"></span>
-    <span class="sh-label">The Problem</span>
-  </div>
+  <div class="sec-head"><span class="sh-n">01</span><span class="sh-line"></span><span class="sh-label">The Problem</span></div>
   <div class="prob-wrap">
     <div>
       <h2 class="prob-title">You built a store.<br>Not a <em>second job.</em></h2>
       <p class="prob-sub">Most Shopify owners spend the majority of their time on tasks that never needed a human in the first place. Every hour on support, follow-ups, and copy is an hour stolen from growth. Meridian eliminates that permanently.</p>
     </div>
     <div class="pain-list">
-      <div class="pain">
-        <span class="pain-n">01</span>
-        <div>
-          <h4>Inbox full of the same questions</h4>
-          <p>Shipping times, returns, sizing, tracking. Your customers need answers now — not when you wake up tomorrow morning.</p>
-        </div>
-      </div>
-      <div class="pain">
-        <span class="pain-n">02</span>
-        <div>
-          <h4>70% of carts are abandoned</h4>
-          <p>Without an automated recovery system, that revenue is gone permanently. No follow-up, no second chance.</p>
-        </div>
-      </div>
-      <div class="pain">
-        <span class="pain-n">03</span>
-        <div>
-          <h4>Product copy written by hand</h4>
-          <p>Hours per SKU. Inconsistent tone. Poor SEO. Entirely avoidable with the right system in place.</p>
-        </div>
-      </div>
-      <div class="pain">
-        <span class="pain-n">04</span>
-        <div>
-          <h4>No time left to grow</h4>
-          <p>Operations consume your day. The store runs you — not the other way around.</p>
-        </div>
-      </div>
+      <div class="pain"><span class="pain-n">01</span><div><h4>Inbox full of the same questions</h4><p>Shipping times, returns, sizing, tracking. Your customers need answers now — not when you wake up tomorrow morning.</p></div></div>
+      <div class="pain"><span class="pain-n">02</span><div><h4>70% of carts are abandoned</h4><p>Without an automated recovery system, that revenue is gone permanently. No follow-up, no second chance.</p></div></div>
+      <div class="pain"><span class="pain-n">03</span><div><h4>Product copy written by hand</h4><p>Hours per SKU. Inconsistent tone. Poor SEO. Entirely avoidable with the right system in place.</p></div></div>
+      <div class="pain"><span class="pain-n">04</span><div><h4>No time left to grow</h4><p>Operations consume your day. The store runs you — not the other way around.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="sec services rv" id="services">
-  <div class="sec-head">
-    <span class="sh-n">02</span>
-    <span class="sh-line"></span>
-    <span class="sh-label">What We Build</span>
-  </div>
+  <div class="sec-head"><span class="sh-n">02</span><span class="sh-line"></span><span class="sh-label">What We Build</span></div>
   <div class="svc-intro">
     <h2 class="svc-title">Three systems.<br><em>One decision.</em></h2>
     <p class="svc-desc">We design, build, and deploy each automation directly into your Shopify stack. Nothing generic, nothing off-the-shelf. Every system built around how your store actually works.</p>
   </div>
   <div class="svc-rows">
-    <div class="svc-row">
-      <span class="svc-n">01</span>
-      <span class="svc-name">AI Support Agent</span>
-      <span class="svc-desc2">Trained on your store data. Handles 90% of customer inquiries instantly, in any language, 24/7. Escalates only when genuinely needed.</span>
-      <span class="svc-kpi">20h saved / wk <span class="arr">→</span></span>
-    </div>
-    <div class="svc-row">
-      <span class="svc-n">02</span>
-      <span class="svc-name">Cart Recovery System</span>
-      <span class="svc-desc2">Smart email and SMS sequences triggered on abandonment. Dynamic timing, personalized incentives, real conversions — fully automated.</span>
-      <span class="svc-kpi">+23% revenue <span class="arr">→</span></span>
-    </div>
-    <div class="svc-row">
-      <span class="svc-n">03</span>
-      <span class="svc-name">Content Engine</span>
-      <span class="svc-desc2">SEO-optimized, on-brand product descriptions for your entire catalog. Hundreds of SKUs in under an hour, written in your voice.</span>
-      <span class="svc-kpi">500 SKUs / 60min <span class="arr">→</span></span>
-    </div>
+    <div class="svc-row"><span class="svc-n">01</span><span class="svc-name">AI Support Agent</span><span class="svc-desc2">Trained on your store data. Handles 90% of customer inquiries instantly, in any language, 24/7. Escalates only when genuinely needed.</span><span class="svc-kpi">20h saved / wk <span class="arr">→</span></span></div>
+    <div class="svc-row"><span class="svc-n">02</span><span class="svc-name">Cart Recovery System</span><span class="svc-desc2">Smart email and SMS sequences triggered on abandonment. Dynamic timing, personalized incentives, real conversions — fully automated.</span><span class="svc-kpi">+23% revenue <span class="arr">→</span></span></div>
+    <div class="svc-row"><span class="svc-n">03</span><span class="svc-name">Content Engine</span><span class="svc-desc2">SEO-optimized, on-brand product descriptions for your entire catalog. Hundreds of SKUs in under an hour, written in your voice.</span><span class="svc-kpi">500 SKUs / 60min <span class="arr">→</span></span></div>
   </div>
 </section>
 
-<!-- PROCESS -->
 <section class="sec process rv" id="process">
-  <div class="sec-head">
-    <span class="sh-n">03</span>
-    <span class="sh-line"></span>
-    <span class="sh-label">How It Works</span>
-  </div>
+  <div class="sec-head"><span class="sh-n">03</span><span class="sh-line"></span><span class="sh-label">How It Works</span></div>
   <div class="proc-grid">
-    <div class="proc-step">
-      <span class="ps-n">Step 01</span>
-      <h3 class="ps-title">Free store audit</h3>
-      <p class="ps-body">We analyze your workflows, identify automation gaps, and show the exact revenue impact — before you commit to anything.</p>
-      <span class="ps-when">Day 1</span>
-    </div>
-    <div class="proc-step">
-      <span class="ps-n">Step 02</span>
-      <h3 class="ps-title">Custom build</h3>
-      <p class="ps-body">Every system built from scratch, trained on your products, policies, and brand voice. Nothing templated, nothing generic.</p>
-      <span class="ps-when">Days 2 – 10</span>
-    </div>
-    <div class="proc-step">
-      <span class="ps-n">Step 03</span>
-      <h3 class="ps-title">Integration & QA</h3>
-      <p class="ps-body">Deployed and stress-tested in your live environment. We don't go live until every flow is airtight and working perfectly.</p>
-      <span class="ps-when">Days 11 – 13</span>
-    </div>
-    <div class="proc-step">
-      <span class="ps-n">Step 04</span>
-      <h3 class="ps-title">Live & optimized</h3>
-      <p class="ps-body">Your systems go live. We monitor performance and continuously refine to improve results month after month.</p>
-      <span class="ps-when">Day 14 onward</span>
-    </div>
+    <div class="proc-step"><span class="ps-n">Step 01</span><h3 class="ps-title">Free store audit</h3><p class="ps-body">We analyze your workflows, identify automation gaps, and show the exact revenue impact — before you commit to anything.</p><span class="ps-when">Day 1</span></div>
+    <div class="proc-step"><span class="ps-n">Step 02</span><h3 class="ps-title">Custom build</h3><p class="ps-body">Every system built from scratch, trained on your products, policies, and brand voice. Nothing templated, nothing generic.</p><span class="ps-when">Days 2 – 10</span></div>
+    <div class="proc-step"><span class="ps-n">Step 03</span><h3 class="ps-title">Integration & QA</h3><p class="ps-body">Deployed and stress-tested in your live environment. We don't go live until every flow is airtight and working perfectly.</p><span class="ps-when">Days 11 – 13</span></div>
+    <div class="proc-step"><span class="ps-n">Step 04</span><h3 class="ps-title">Live & optimized</h3><p class="ps-body">Your systems go live. We monitor performance and continuously refine to improve results month after month.</p><span class="ps-when">Day 14 onward</span></div>
   </div>
 </section>
 
-<!-- PRICING -->
 <section class="sec pricing rv" id="pricing">
-  <div class="sec-head">
-    <span class="sh-n">04</span>
-    <span class="sh-line"></span>
-    <span class="sh-label">Pricing</span>
-  </div>
+  <div class="sec-head"><span class="sh-n">04</span><span class="sh-line"></span><span class="sh-label">Pricing</span></div>
   <div class="price-intro">
     <h2 class="price-title">Transparent.<br><em>No surprises.</em></h2>
     <p class="price-sub">One-time setup to build and deploy your systems, plus an optional monthly retainer for ongoing management, monitoring, and optimization.</p>
@@ -717,111 +597,69 @@ footer a:hover{color:var(--red2);}
       <span class="card-plan">Starter</span>
       <div class="card-amt">$497</div>
       <div class="card-cycle">one-time + $197 / month</div>
-      <ul class="card-feats">
-        <li>AI Customer Support Agent</li>
-        <li>Basic FAQ automation</li>
-        <li>Email support</li>
-        <li>One revision round</li>
-      </ul>
-      <a href="#contact" class="card-btn">Get started</a>
+      <ul class="card-feats"><li>AI Customer Support Agent</li><li>Basic FAQ automation</li><li>Email support</li><li>One revision round</li></ul>
+      <a href="mailto:sadek19977@outlook.fr" class="card-btn">Get started</a>
     </div>
     <div class="card feat">
       <div class="feat-badge"></div>
       <span class="card-plan">Growth — Most Popular</span>
       <div class="card-amt">$997</div>
       <div class="card-cycle">one-time + $397 / month</div>
-      <ul class="card-feats">
-        <li>All three AI systems</li>
-        <li>Abandoned cart recovery</li>
-        <li>Product content engine</li>
-        <li>Monthly optimization</li>
-        <li>Priority support</li>
-      </ul>
-      <a href="#contact" class="card-btn">Get started</a>
+      <ul class="card-feats"><li>All three AI systems</li><li>Abandoned cart recovery</li><li>Product content engine</li><li>Monthly optimization</li><li>Priority support</li></ul>
+      <a href="mailto:sadek19977@outlook.fr" class="card-btn">Get started</a>
     </div>
     <div class="card">
       <span class="card-plan">Scale</span>
       <div class="card-amt">$1,997</div>
       <div class="card-cycle">one-time + $697 / month</div>
-      <ul class="card-feats">
-        <li>Everything in Growth</li>
-        <li>Custom AI workflows</li>
-        <li>Advanced analytics</li>
-        <li>Weekly strategy calls</li>
-        <li>Dedicated account manager</li>
-      </ul>
-      <a href="#contact" class="card-btn">Contact us</a>
+      <ul class="card-feats"><li>Everything in Growth</li><li>Custom AI workflows</li><li>Advanced analytics</li><li>Weekly strategy calls</li><li>Dedicated account manager</li></ul>
+      <a href="mailto:sadek19977@outlook.fr" class="card-btn">Contact us</a>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section class="sec testi rv">
-  <div class="sec-head">
-    <span class="sh-n">05</span>
-    <span class="sh-line"></span>
-    <span class="sh-label">Client Results</span>
-  </div>
+  <div class="sec-head"><span class="sh-n">05</span><span class="sh-line"></span><span class="sh-label">Client Results</span></div>
   <div class="t-grid">
     <div class="t-card">
-      <div class="t-top">
-        <div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div>
-        <span class="t-idx">01 / 03</span>
-      </div>
+      <div class="t-top"><div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div><span class="t-idx">01 / 03</span></div>
       <p class="t-quote">"The support agent handles 90% of our tickets without us touching a thing. We went from four hours a day on support to maybe thirty minutes. The first month paid for itself three times over."</p>
-      <div class="t-sep"></div>
-      <span class="t-name">James M.</span>
-      <span class="t-role">fitness-gear-store.com · $180K / yr</span>
+      <div class="t-sep"></div><span class="t-name">James M.</span><span class="t-role">fitness-gear-store.com · $180K / yr</span>
     </div>
     <div class="t-card">
-      <div class="t-top">
-        <div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div>
-        <span class="t-idx">02 / 03</span>
-      </div>
+      <div class="t-top"><div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div><span class="t-idx">02 / 03</span></div>
       <p class="t-quote">"We were losing $8,000 a month in abandoned carts with zero recovery. Three weeks in, we're automatically getting back around $2,000 of that. It runs completely on its own."</p>
-      <div class="t-sep"></div>
-      <span class="t-name">Sarah R.</span>
-      <span class="t-role">skincare-brand.com · Shopify Plus</span>
+      <div class="t-sep"></div><span class="t-name">Sarah R.</span><span class="t-role">skincare-brand.com · Shopify Plus</span>
     </div>
     <div class="t-card">
-      <div class="t-top">
-        <div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div>
-        <span class="t-idx">03 / 03</span>
-      </div>
+      <div class="t-top"><div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div><span class="t-idx">03 / 03</span></div>
       <p class="t-quote">"300 products with terrible descriptions. The content engine rewrote everything in one afternoon. Sales on those products went up 30% the following month. Wish I'd done it a year ago."</p>
-      <div class="t-sep"></div>
-      <span class="t-name">David K.</span>
-      <span class="t-role">home-decor-store.com · 500+ SKUs</span>
+      <div class="t-sep"></div><span class="t-name">David K.</span><span class="t-role">home-decor-store.com · 500+ SKUs</span>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
 <section class="final rv" id="contact">
   <div class="final-orb"></div>
   <h2 class="final-h2">Let your store<br>run <em>without</em> you.</h2>
   <div class="final-right">
     <p class="final-p">Book a free 30-minute audit. We'll map your biggest automation opportunities and show you exactly what you're leaving on the table — no pitch, no obligation, no pressure.</p>
-    <a href="mailto:hello@meridian.ai" class="btn-red">Book your free audit →</a>
+    <a href="mailto:sadek19977@outlook.fr" class="btn-red">Book your free audit →</a>
     <span class="final-note">// free · no credit card · no commitment</span>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <a href="#" class="footer-logo"><span class="footer-logo-dot"></span>Meridian</a>
   <p>© 2026 Meridian. All rights reserved.</p>
-  <a href="mailto:hello@meridian.ai">hello@meridian.ai</a>
+  <a href="mailto:sadek19977@outlook.fr">sadek19977@outlook.fr</a>
 </footer>
 
 <script>
-// Cursor
 const cur=document.getElementById('cur'),ring=document.getElementById('curRing');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
 (function loop(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
-
-// Reveal on scroll
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');}),{threshold:.07});
 document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 </script>
